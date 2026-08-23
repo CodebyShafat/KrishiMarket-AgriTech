@@ -1,0 +1,17 @@
+enum AiIntent {
+  searchProduct,
+  viewProduct,
+  compareProducts,
+  addToCart,
+  viewCart,
+  viewOrders,
+  trackOrder,
+  createProductListing,
+  updateProduct,
+  createBulkRequirement,
+  viewBulkRequirements,
+  submitBulkOffer,
+  viewBulkOffers,
+  generalQuestion,
+  unknown,
+}
