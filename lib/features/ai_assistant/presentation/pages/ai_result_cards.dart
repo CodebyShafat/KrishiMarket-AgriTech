@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+
 import '../../../marketplace/domain/entities/product_entity.dart';
-import 'package:krishimarket/l10n/app_localizations.dart';
 
 class ProductResultCard extends StatelessWidget {
   final dynamic product; // Usually ProductEntity
@@ -29,10 +29,7 @@ class ProductResultCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                OutlinedButton(
-                  onPressed: () {},
-                  child: const Text('View'),
-                ),
+                OutlinedButton(onPressed: () {}, child: const Text('View')),
                 const SizedBox(width: 8),
                 ElevatedButton(
                   onPressed: () {},

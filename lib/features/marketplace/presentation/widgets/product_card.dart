@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../domain/entities/product_entity.dart';
 
 import 'package:krishimarket/l10n/app_localizations.dart';
+import 'package:krishimarket/core/utils/category_localizer.dart';
 
 class ProductCard extends StatelessWidget {
   final ProductEntity product;
@@ -48,7 +49,7 @@ class ProductCard extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                     const SizedBox(height: 4),
-                    Text('${l10n.category}: ${product.category}'),
+                    Text('${l10n.category}: ${CategoryLocalizer.getLocalizedCategory(product.category, l10n)}'),
                     const SizedBox(height: 4),
                     Text('${l10n.price}: ₹${product.price}/${product.unit}'),
                     const SizedBox(height: 4),

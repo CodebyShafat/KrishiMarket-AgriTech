@@ -158,7 +158,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get groceryStore => 'किराने की दुकान';
 
   @override
-  String get other => 'अन्य';
+  String get other => 'अन्य (Other)';
 
   @override
   String get logout => 'लॉग आउट';
@@ -257,290 +257,290 @@ class AppLocalizationsHi extends AppLocalizations {
   String get uploadImageLabel => 'छवि प्लेसहोल्डर (भविष्य)';
 
   @override
-  String get validationRequired => 'This field is required';
+  String get validationRequired => 'यह फ़ील्ड आवश्यक है';
 
   @override
-  String get validationNumeric => 'Please enter a valid positive number';
+  String get validationNumeric => 'कृपया एक वैध संख्या दर्ज करें';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'संपादित करें';
 
   @override
-  String get marketplace => 'Marketplace';
+  String get marketplace => 'बाज़ार';
 
   @override
-  String get search => 'Search';
+  String get search => 'खोजें';
 
   @override
-  String get nearbyProducts => 'Nearby Products';
+  String get nearbyProducts => 'आस-पास के उत्पाद';
 
   @override
-  String get all => 'All';
+  String get all => 'सभी';
 
   @override
-  String get wheat => 'Wheat';
+  String get wheat => 'गेहूँ (Wheat)';
 
   @override
-  String get rice => 'Rice';
+  String get rice => 'चावल (Rice)';
 
   @override
-  String get potato => 'Potato';
+  String get potato => 'आलू (Potato)';
 
   @override
-  String get onion => 'Onion';
+  String get onion => 'प्याज़ (Onion)';
 
   @override
-  String get tomato => 'Tomato';
+  String get tomato => 'टमाटर (Tomato)';
 
   @override
-  String get vegetables => 'Vegetables';
+  String get vegetables => 'सब्ज़ियाँ (Vegetables)';
 
   @override
-  String get fruits => 'Fruits';
+  String get fruits => 'फल (Fruits)';
 
   @override
-  String get pulses => 'Pulses';
+  String get pulses => 'दालें (Pulses)';
 
   @override
-  String get spices => 'Spices';
+  String get spices => 'मसाले (Spices)';
 
   @override
-  String get farmerId => 'Farmer ID';
+  String get farmerId => 'किसान आईडी';
 
   @override
-  String get sort => 'Sort';
+  String get sort => 'क्रमबद्ध करें';
 
   @override
-  String get priceLowToHigh => 'Price: Low to High';
+  String get priceLowToHigh => 'कीमत: कम से ज्यादा';
 
   @override
-  String get priceHighToLow => 'Price: High to Low';
+  String get priceHighToLow => 'कीमत: ज्यादा से कम';
 
   @override
-  String get nearest => 'Nearest';
+  String get nearest => 'निकटतम';
 
   @override
-  String get noProductsFound => 'No products found';
+  String get noProductsFound => 'कोई उत्पाद नहीं मिला';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'साफ़ करें';
 
   @override
-  String get viewDetails => 'View Details';
+  String get viewDetails => 'विवरण देखें';
 
   @override
-  String get compare => 'Compare';
+  String get compare => 'तुलना करें';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'जल्द आ रहा है';
 
   @override
-  String get buyNow => 'Buy Now (Coming Soon)';
+  String get buyNow => 'अभी खरीदें (जल्द आ रहा है)';
 
   @override
-  String get myCart => 'My Cart';
+  String get myCart => 'मेरा कार्ट';
 
   @override
-  String get addToCart => 'Add to Cart';
+  String get addToCart => 'कार्ट में डालें';
 
   @override
-  String get addedToCart => 'Added to cart';
+  String get addedToCart => 'कार्ट में डाला गया';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'हटाएं';
 
   @override
-  String get subtotal => 'Subtotal';
+  String get subtotal => 'उप-योग';
 
   @override
-  String get total => 'Total';
+  String get total => 'कुल';
 
   @override
-  String get grandTotal => 'Grand Total';
+  String get grandTotal => 'कुल योग';
 
   @override
-  String get checkout => 'Checkout';
+  String get checkout => 'चेकआउट';
 
   @override
-  String get orderSummary => 'Order Summary';
+  String get orderSummary => 'ऑर्डर सारांश';
 
   @override
-  String get placeOrder => 'Place Order';
+  String get placeOrder => 'ऑर्डर दें';
 
   @override
-  String get orderPlaced => 'Order placed successfully';
+  String get orderPlaced => 'ऑर्डर सफलतापूर्वक दिया गया';
 
   @override
-  String get orderId => 'Order ID';
+  String get orderId => 'ऑर्डर आईडी';
 
   @override
-  String get orderDetails => 'Order Details';
+  String get orderDetails => 'ऑर्डर विवरण';
 
   @override
-  String get placed => 'Placed';
+  String get placed => 'दिया गया';
 
   @override
-  String get accepted => 'Accepted';
+  String get accepted => 'स्वीकृत';
 
   @override
-  String get preparing => 'Preparing';
+  String get preparing => 'तैयार हो रहा है';
 
   @override
-  String get readyForPickup => 'Ready for Pickup';
+  String get readyForPickup => 'पिकअप के लिए तैयार';
 
   @override
-  String get completed => 'Completed';
+  String get completed => 'पूरा हुआ';
 
   @override
-  String get cancelled => 'Cancelled';
+  String get cancelled => 'रद्द किया गया';
 
   @override
-  String get cancelOrder => 'Cancel Order';
+  String get cancelOrder => 'ऑर्डर रद्द करें';
 
   @override
   String get confirmCancellation =>
-      'Are you sure you want to cancel this order?';
+      'क्या आप वाकई इस ऑर्डर को रद्द करना चाहते हैं?';
 
   @override
-  String get continueShopping => 'Continue Shopping';
+  String get continueShopping => 'खरीदारी जारी रखें';
 
   @override
-  String get viewMyOrders => 'View My Orders';
+  String get viewMyOrders => 'मेरे ऑर्डर देखें';
 
   @override
-  String get deliveryLocation => 'Delivery Location';
+  String get deliveryLocation => 'डिलीवरी स्थान';
 
   @override
-  String get paymentIntegrationComingSoon => 'Payment integration coming soon';
+  String get paymentIntegrationComingSoon => 'भुगतान एकीकरण जल्द आ रहा है';
 
   @override
-  String get emptyCart => 'Your cart is empty';
+  String get emptyCart => 'आपका कार्ट खाली है';
 
   @override
-  String get noOrders => 'No orders found';
+  String get noOrders => 'कोई ऑर्डर नहीं मिला';
 
   @override
-  String get status => 'Status';
+  String get status => 'स्थिति';
 
   @override
-  String get date => 'Date';
+  String get date => 'तिथि';
 
   @override
-  String get items => 'Items';
+  String get items => 'आइटम';
 
   @override
-  String get farmerOrders => 'Farmer Orders';
+  String get farmerOrders => 'किसान ऑर्डर';
 
   @override
-  String get updateStatus => 'Update Status';
+  String get updateStatus => 'स्थिति अपडेट करें';
 
   @override
-  String get bulkRequirements => 'Bulk Requirements';
+  String get bulkRequirements => 'थोक आवश्यकताएँ (Bulk Requirements)';
 
   @override
-  String get myRequirements => 'My Requirements';
+  String get myRequirements => 'मेरी आवश्यकताएँ';
 
   @override
-  String get createRequirement => 'Create Requirement';
+  String get createRequirement => 'आवश्यकता बनाएँ';
 
   @override
-  String get product => 'Product';
+  String get product => 'उत्पाद';
 
   @override
-  String get requiredQuantity => 'Required Quantity';
+  String get requiredQuantity => 'आवश्यक मात्रा';
 
   @override
-  String get targetPrice => 'Target Price';
+  String get targetPrice => 'लक्षित मूल्य';
 
   @override
-  String get requiredBy => 'Required By';
+  String get requiredBy => 'आवश्यकता द्वारा';
 
   @override
-  String get offers => 'Offers';
+  String get offers => 'प्रस्ताव';
 
   @override
-  String get viewOffers => 'View Offers';
+  String get viewOffers => 'प्रस्ताव देखें';
 
   @override
-  String get submitOffer => 'Submit Offer';
+  String get submitOffer => 'प्रस्ताव सबमिट करें';
 
   @override
-  String get availableQuantity => 'Available Quantity';
+  String get availableQuantity => 'उपलब्ध मात्रा';
 
   @override
-  String get offeredPrice => 'Offered Price';
+  String get offeredPrice => 'प्रस्तावित मूल्य';
 
   @override
-  String get readyDate => 'Ready Date';
+  String get readyDate => 'तैयार होने की तिथि';
 
   @override
-  String get farmerNote => 'Farmer Note';
+  String get farmerNote => 'किसान का नोट';
 
   @override
-  String get myOffers => 'My Offers';
+  String get myOffers => 'मेरे प्रस्ताव (My Offers)';
 
   @override
-  String get acceptOffer => 'Accept Offer';
+  String get acceptOffer => 'प्रस्ताव स्वीकार करें';
 
   @override
-  String get rejectOffer => 'Reject Offer';
+  String get rejectOffer => 'प्रस्ताव अस्वीकार करें';
 
   @override
-  String get withdrawOffer => 'Withdraw Offer';
+  String get withdrawOffer => 'प्रस्ताव वापस लें';
 
   @override
-  String get acceptedQuantity => 'Accepted Quantity';
+  String get acceptedQuantity => 'स्वीकृत मात्रा';
 
   @override
-  String get remainingQuantity => 'Remaining Quantity';
+  String get remainingQuantity => 'शेष मात्रा';
 
   @override
-  String get open => 'Open';
+  String get open => 'खुला';
 
   @override
-  String get partiallyFulfilled => 'Partially Fulfilled';
+  String get partiallyFulfilled => 'आंशिक रूप से पूर्ण';
 
   @override
-  String get fulfilled => 'Fulfilled';
+  String get fulfilled => 'पूर्ण';
 
   @override
-  String get expired => 'Expired';
+  String get expired => 'समाप्त';
 
   @override
-  String get submitted => 'Submitted';
+  String get submitted => 'प्रस्तुत';
 
   @override
-  String get shortlisted => 'Shortlisted';
+  String get shortlisted => 'शॉर्टलिस्ट किया गया';
 
   @override
-  String get rejected => 'Rejected';
+  String get rejected => 'अस्वीकृत';
 
   @override
-  String get withdrawn => 'Withdrawn';
+  String get withdrawn => 'वापस लिया गया';
 
   @override
-  String get bestQuality => 'Best Quality';
+  String get bestQuality => 'सर्वोत्तम गुणवत्ता';
 
   @override
-  String get earliestReadyDate => 'Earliest Ready Date';
+  String get earliestReadyDate => 'सबसे जल्दी तैयार होने की तिथि';
 
   @override
-  String get noRequirements => 'No requirements found';
+  String get noRequirements => 'कोई आवश्यकता नहीं मिली';
 
   @override
-  String get noOffers => 'No offers found';
+  String get noOffers => 'कोई प्रस्ताव नहीं मिला';
 
   @override
-  String get target => 'Target';
+  String get target => 'लक्ष्य';
 
   @override
-  String get publish => 'Publish';
+  String get publish => 'प्रकाशित करें';
 
   @override
-  String get compareOffers => 'Compare Offers';
+  String get compareOffers => 'प्रस्तावों की तुलना करें';
 
   @override
-  String get buyer => 'Buyer';
+  String get buyer => 'खरीदार';
 
   @override
   String get aiAssistant => 'एआई सहायक';
@@ -593,4 +593,54 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get actionError => 'कार्रवाई पूरी नहीं हो सकी।';
+
+  @override
+  String get ai_ask_quantity => 'How much quantity do you need?';
+
+  @override
+  String get ai_ask_price => 'What is your target price?';
+
+  @override
+  String get ai_ask_crop => 'Which crop are you looking for?';
+
+  @override
+  String get ai_confirm_listing =>
+      'Please confirm if you want to create this listing.';
+
+  @override
+  String get ai_confirm_order =>
+      'Please confirm if you want to place this order.';
+
+  @override
+  String get ai_confirm_requirement =>
+      'Please confirm if you want to create this requirement.';
+
+  @override
+  String get ai_confirm_offer =>
+      'Please confirm if you want to submit this offer.';
+
+  @override
+  String get ai_greet => 'Hello! How can I help you today?';
+
+  @override
+  String get ai_network_error => 'Network error. Please check your connection.';
+
+  @override
+  String get ai_service_error => 'AI service error. Please try again later.';
+
+  @override
+  String get ai_parse_error => 'I couldn\'t understand that. Please rephrase.';
+
+  @override
+  String get ai_fallback_response =>
+      'I\'m not sure how to help with that. Can you provide more details?';
+
+  @override
+  String get ai_action_success => 'Action completed successfully.';
+
+  @override
+  String get ai_action_error => 'Action failed to execute.';
+
+  @override
+  String get ai_confirm_action => 'Are you sure you want to proceed?';
 }

@@ -594,4 +594,54 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get actionError => 'Could not complete the action.';
+
+  @override
+  String get ai_ask_quantity => 'How much quantity do you need?';
+
+  @override
+  String get ai_ask_price => 'What is your target price?';
+
+  @override
+  String get ai_ask_crop => 'Which crop are you looking for?';
+
+  @override
+  String get ai_confirm_listing =>
+      'Please confirm if you want to create this listing.';
+
+  @override
+  String get ai_confirm_order =>
+      'Please confirm if you want to place this order.';
+
+  @override
+  String get ai_confirm_requirement =>
+      'Please confirm if you want to create this requirement.';
+
+  @override
+  String get ai_confirm_offer =>
+      'Please confirm if you want to submit this offer.';
+
+  @override
+  String get ai_greet => 'Hello! How can I help you today?';
+
+  @override
+  String get ai_network_error => 'Network error. Please check your connection.';
+
+  @override
+  String get ai_service_error => 'AI service error. Please try again later.';
+
+  @override
+  String get ai_parse_error => 'I couldn\'t understand that. Please rephrase.';
+
+  @override
+  String get ai_fallback_response =>
+      'I\'m not sure how to help with that. Can you provide more details?';
+
+  @override
+  String get ai_action_success => 'Action completed successfully.';
+
+  @override
+  String get ai_action_error => 'Action failed to execute.';
+
+  @override
+  String get ai_confirm_action => 'Are you sure you want to proceed?';
 }

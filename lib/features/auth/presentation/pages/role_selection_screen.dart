@@ -60,8 +60,9 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
                       titlePrimary: l10n.customer,
                       titleSecondary: enL10n.customer,
                       icon: Icons.shopping_cart,
-                      isSelected: _selectedRole == 'customer',
-                      onTap: () => setState(() => _selectedRole = 'customer'),
+                      isSelected: _selectedRole == 'retail_buyer',
+                      onTap: () =>
+                          setState(() => _selectedRole = 'retail_buyer'),
                     ),
                     const SizedBox(height: 16),
                     SelectionCard(
@@ -81,7 +82,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
                 onPressed: () {
                   if (_selectedRole == 'farmer') {
                     Navigator.pushNamed(context, AppRouter.farmer);
-                  } else if (_selectedRole == 'customer') {
+                  } else if (_selectedRole == 'retail_buyer') {
                     Navigator.pushNamed(context, AppRouter.customer);
                   } else if (_selectedRole == 'bulk_buyer') {
                     Navigator.pushNamed(context, AppRouter.bulkBuyer);

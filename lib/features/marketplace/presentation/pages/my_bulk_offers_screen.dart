@@ -5,6 +5,7 @@ import '../providers/bulk_offer_provider.dart';
 import '../../domain/entities/bulk_offer_entity.dart';
 
 import 'package:krishimarket/l10n/app_localizations.dart';
+import 'package:krishimarket/core/utils/status_localizer.dart';
 
 import '../../../auth/presentation/providers/auth_provider.dart';
 
@@ -54,14 +55,14 @@ class _MyBulkOffersScreenState extends State<MyBulkOffersScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Req: ${offer.requirementId}',
+                              'ID: ${offer.requirementId}',
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
                               ),
                             ),
                             Text(
-                              offer.status.name.toUpperCase(),
+                              StatusLocalizer.getLocalizedOfferStatus(offer.status, l10n).toUpperCase(),
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.blue,
@@ -80,7 +81,7 @@ class _MyBulkOffersScreenState extends State<MyBulkOffersScreen> {
                         const SizedBox(height: 8),
                         if (offer.status == BulkOfferStatus.accepted)
                           Text(
-                            'Accepted Qty: ${offer.acceptedQuantity}',
+                            '${l10n.acceptedQuantity}: ${offer.acceptedQuantity}',
                             style: const TextStyle(
                               color: Colors.green,
                               fontWeight: FontWeight.bold,

@@ -7,6 +7,7 @@ import '../providers/cart_provider.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 
 import 'package:krishimarket/l10n/app_localizations.dart';
+import 'package:krishimarket/core/utils/category_localizer.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final ProductEntity product;
@@ -45,7 +46,7 @@ class ProductDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final user = context.watch<AuthProvider>().currentUser;
-    final isCustomer = user?.role == 'Customer';
+    final isCustomer = user?.role?.toLowerCase() == 'retail_buyer' || user?.role?.toLowerCase() == 'customer';
 
     return Scaffold(
       appBar: AppBar(title: Text(product.name)),
@@ -69,7 +70,7 @@ class ProductDetailsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '${l10n.category}: ${product.category}',
+                    '${l10n.category}: ${CategoryLocalizer.getLocalizedCategory(product.category, l10n)}',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(height: 8),

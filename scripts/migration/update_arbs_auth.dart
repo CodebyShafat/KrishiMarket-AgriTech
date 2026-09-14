@@ -353,9 +353,7 @@ void main() {
       final Map<String, dynamic> json = jsonDecode(content);
       json.addAll(entry.value as Map<String, dynamic>);
       file.writeAsStringSync(
-        '{\n' +
-            json.entries.map((e) => '  "${e.key}": "${e.value}"').join(',\n') +
-            '\n}\n',
+        '{\n${json.entries.map((e) => '  "${e.key}": "${e.value}"').join(',\n')}\n}\n',
       );
     }
   }

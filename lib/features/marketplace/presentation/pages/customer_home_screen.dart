@@ -3,6 +3,8 @@ import 'package:krishimarket/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 import '../../../auth/presentation/providers/auth_provider.dart';
+import '../../../auth/presentation/pages/profile_screen.dart';
+import '../../../settings/presentation/pages/settings_screen.dart';
 
 class CustomerHomeScreen extends StatefulWidget {
   const CustomerHomeScreen({super.key});
@@ -40,84 +42,35 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
           ),
           IconButton(
             icon: const Icon(Icons.logout),
-            onPressed: () {
-              context.read<AuthProvider>().signOut();
-              Navigator.pushNamedAndRemoveUntil(
-                context,
-                '/phoneAuth',
-                (route) => false,
+            onPressed: () async {
+              showDialog(
+                context: context,
+                barrierDismissible: false,
+                builder: (context) => const Center(child: CircularProgressIndicator()),
               );
+              try {
+                await context.read<AuthProvider>().signOut();
+                if (!context.mounted) return;
+                Navigator.of(context).pop();
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  '/phoneAuth',
+                  (route) => false,
+                );
+              } catch (e) {
+                if (!context.mounted) return;
+                Navigator.of(context).pop();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Failed to logout.')),
+                );
+              }
             },
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            _buildSectionHeader(l10n.welcome, enL10n.welcome, context),
-            const SizedBox(height: 16),
-            TextField(
-              decoration: InputDecoration(
-                hintText: '${l10n.searchProducts} (${enL10n.searchProducts})',
-                prefixIcon: const Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-            ),
-            const SizedBox(height: 24),
-            _buildSectionHeader(l10n.categories, enL10n.categories, context),
-            const SizedBox(height: 12),
-            SizedBox(
-              height: 100,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  _buildCategoryCard(Icons.eco, 'Vegetables', context),
-                  _buildCategoryCard(Icons.apple, 'Fruits', context),
-                  _buildCategoryCard(Icons.grain, 'Grains', context),
-                ],
-              ),
-            ),
-            const SizedBox(height: 24),
-            _buildSectionHeader(l10n.nearbyFresh, enL10n.nearbyFresh, context),
-            const SizedBox(height: 16),
-            GridView.count(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              crossAxisCount: 2,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              children: [
-                _buildActionCard(
-                  l10n.marketplace,
-                  'Marketplace',
-                  Icons.storefront,
-                  context,
-                  () => Navigator.pushNamed(context, '/customerMarketplace'),
-                ),
-                _buildActionCard(
-                  l10n.cart,
-                  enL10n.cart,
-                  Icons.shopping_cart,
-                  context,
-                  () => Navigator.pushNamed(context, '/cart'),
-                ),
-                _buildActionCard(
-                  l10n.orders,
-                  enL10n.orders,
-                  Icons.local_shipping,
-                  context,
-                  () => Navigator.pushNamed(context, '/myOrders'),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+      body: _buildBody(context, l10n, enL10n),
       floatingActionButton: FloatingActionButton(
+        heroTag: null,
         onPressed: () => Navigator.pushNamed(context, '/aiAssistant'),
         child: const Icon(Icons.auto_awesome),
       ),
@@ -136,6 +89,82 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
           BottomNavigationBarItem(
             icon: const Icon(Icons.settings),
             label: '${l10n.settings} (${enL10n.settings})',
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBody(BuildContext context, AppLocalizations l10n, AppLocalizations enL10n) {
+    if (_currentIndex == 1) {
+      return const ProfileScreen();
+    }
+    if (_currentIndex == 2) {
+      return const SettingsScreen();
+    }
+
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _buildSectionHeader(l10n.welcome, enL10n.welcome, context),
+          const SizedBox(height: 16),
+          TextField(
+            decoration: InputDecoration(
+              hintText: '${l10n.searchProducts} (${enL10n.searchProducts})',
+              prefixIcon: const Icon(Icons.search),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
+          const SizedBox(height: 24),
+          _buildSectionHeader(l10n.categories, enL10n.categories, context),
+          const SizedBox(height: 12),
+          SizedBox(
+            height: 100,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                _buildCategoryCard(Icons.eco, 'Vegetables', context),
+                _buildCategoryCard(Icons.apple, 'Fruits', context),
+                _buildCategoryCard(Icons.grain, 'Grains', context),
+              ],
+            ),
+          ),
+          const SizedBox(height: 24),
+          _buildSectionHeader(l10n.nearbyFresh, enL10n.nearbyFresh, context),
+          const SizedBox(height: 16),
+          GridView.count(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            crossAxisCount: 2,
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
+            children: [
+              _buildActionCard(
+                l10n.marketplace,
+                'Marketplace',
+                Icons.storefront,
+                context,
+                () => Navigator.pushNamed(context, '/customerMarketplace'),
+              ),
+              _buildActionCard(
+                l10n.cart,
+                enL10n.cart,
+                Icons.shopping_cart,
+                context,
+                () => Navigator.pushNamed(context, '/cart'),
+              ),
+              _buildActionCard(
+                l10n.orders,
+                enL10n.orders,
+                Icons.local_shipping,
+                context,
+                () => Navigator.pushNamed(context, '/myOrders'),
+              ),
+            ],
           ),
         ],
       ),

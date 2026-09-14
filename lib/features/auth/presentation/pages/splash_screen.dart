@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
       final role = authProvider.currentUser?.role;
       if (role == 'farmer') {
         Navigator.pushReplacementNamed(context, '/farmer');
-      } else if (role == 'customer') {
+      } else if (role == 'retail_buyer') {
         Navigator.pushReplacementNamed(context, '/customer');
       } else if (role == 'bulk_buyer') {
         Navigator.pushReplacementNamed(context, '/bulkBuyer');
@@ -53,30 +53,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    final enL10n = lookupAppLocalizations(const Locale('en'));
-
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Placeholder logo using icon
-            const Icon(Icons.agriculture, size: 120, color: Colors.white),
-            const SizedBox(height: 24),
-            Text(
-              l10n.appTitle,
-              style: Theme.of(context).textTheme.displayLarge
-                  ?.copyWith(color: Colors.white),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              enL10n.appTitle,
-              style: Theme.of(context).textTheme.titleLarge
-                  ?.copyWith(color: Colors.white70, letterSpacing: 2.0),
-            ),
-          ],
+      body: SizedBox.expand(
+        child: Image.asset(
+          'assets/splash.png',
+          fit: BoxFit.cover,
         ),
       ),
     );

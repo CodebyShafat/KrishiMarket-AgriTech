@@ -160,7 +160,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get groceryStore => 'மளிகை கடை';
 
   @override
-  String get other => 'மற்றவை';
+  String get other => 'மற்றவை (Other)';
 
   @override
   String get logout => 'வெளியேறு';
@@ -259,290 +259,290 @@ class AppLocalizationsTa extends AppLocalizations {
   String get uploadImageLabel => 'படம் ஒதுக்கிடம் (எதிர்காலம்)';
 
   @override
-  String get validationRequired => 'This field is required';
+  String get validationRequired => 'இந்த புலம் அவசியம்';
 
   @override
-  String get validationNumeric => 'Please enter a valid positive number';
+  String get validationNumeric => 'சரியான எண்ணை உள்ளிடவும்';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'திருத்து';
 
   @override
-  String get marketplace => 'Marketplace';
+  String get marketplace => 'சந்தை';
 
   @override
-  String get search => 'Search';
+  String get search => 'தேடு';
 
   @override
-  String get nearbyProducts => 'Nearby Products';
+  String get nearbyProducts => 'அருகிலுள்ள தயாரிப்புகள்';
 
   @override
-  String get all => 'All';
+  String get all => 'அனைத்தும்';
 
   @override
-  String get wheat => 'Wheat';
+  String get wheat => 'கோதுமை (Wheat)';
 
   @override
-  String get rice => 'Rice';
+  String get rice => 'அரிசி (Rice)';
 
   @override
-  String get potato => 'Potato';
+  String get potato => 'உருளைக்கிழங்கு (Potato)';
 
   @override
-  String get onion => 'Onion';
+  String get onion => 'வெங்காயம் (Onion)';
 
   @override
-  String get tomato => 'Tomato';
+  String get tomato => 'தக்காளி (Tomato)';
 
   @override
-  String get vegetables => 'Vegetables';
+  String get vegetables => 'காய்கறிகள் (Vegetables)';
 
   @override
-  String get fruits => 'Fruits';
+  String get fruits => 'பழங்கள் (Fruits)';
 
   @override
-  String get pulses => 'Pulses';
+  String get pulses => 'பருப்புகள் (Pulses)';
 
   @override
-  String get spices => 'Spices';
+  String get spices => 'மசாலா (Spices)';
 
   @override
-  String get farmerId => 'Farmer ID';
+  String get farmerId => 'விவசாயி ஐடி';
 
   @override
-  String get sort => 'Sort';
+  String get sort => 'வரிசைப்படுத்து';
 
   @override
-  String get priceLowToHigh => 'Price: Low to High';
+  String get priceLowToHigh => 'விலை: குறைவு முதல் அதிகம்';
 
   @override
-  String get priceHighToLow => 'Price: High to Low';
+  String get priceHighToLow => 'விலை: அதிகம் முதல் குறைவு';
 
   @override
-  String get nearest => 'Nearest';
+  String get nearest => 'அருகில்';
 
   @override
-  String get noProductsFound => 'No products found';
+  String get noProductsFound => 'எந்த தயாரிப்புகளும் காணப்படவில்லை';
 
   @override
-  String get clear => 'Clear';
+  String get clear => 'அழி';
 
   @override
-  String get viewDetails => 'View Details';
+  String get viewDetails => 'விவரங்களை காண்';
 
   @override
-  String get compare => 'Compare';
+  String get compare => 'ஒப்பிடு';
 
   @override
-  String get comingSoon => 'Coming Soon';
+  String get comingSoon => 'விரைவில்';
 
   @override
-  String get buyNow => 'Buy Now (Coming Soon)';
+  String get buyNow => 'இப்போது வாங்கவும் (விரைவில்)';
 
   @override
-  String get myCart => 'My Cart';
+  String get myCart => 'எனது கார்ட்';
 
   @override
-  String get addToCart => 'Add to Cart';
+  String get addToCart => 'கார்ட்டில் சேர்';
 
   @override
-  String get addedToCart => 'Added to cart';
+  String get addedToCart => 'கார்ட்டில் சேர்க்கப்பட்டது';
 
   @override
-  String get remove => 'Remove';
+  String get remove => 'அகற்று';
 
   @override
-  String get subtotal => 'Subtotal';
+  String get subtotal => 'உப மொத்தம்';
 
   @override
-  String get total => 'Total';
+  String get total => 'மொத்தம்';
 
   @override
-  String get grandTotal => 'Grand Total';
+  String get grandTotal => 'முழு மொத்தம்';
 
   @override
-  String get checkout => 'Checkout';
+  String get checkout => 'செக்அவுட்';
 
   @override
-  String get orderSummary => 'Order Summary';
+  String get orderSummary => 'ஆர்டர் சுருக்கம்';
 
   @override
-  String get placeOrder => 'Place Order';
+  String get placeOrder => 'ஆர்டர் செய்';
 
   @override
-  String get orderPlaced => 'Order placed successfully';
+  String get orderPlaced => 'ஆர்டர் வெற்றிகரமாக செய்யப்பட்டது';
 
   @override
-  String get orderId => 'Order ID';
+  String get orderId => 'ஆர்டர் ஐடி';
 
   @override
-  String get orderDetails => 'Order Details';
+  String get orderDetails => 'ஆர்டர் விவரங்கள்';
 
   @override
-  String get placed => 'Placed';
+  String get placed => 'செய்யப்பட்டது';
 
   @override
-  String get accepted => 'Accepted';
+  String get accepted => 'ஏற்றுக்கொள்ளப்பட்டது';
 
   @override
-  String get preparing => 'Preparing';
+  String get preparing => 'தயாராகிறது';
 
   @override
-  String get readyForPickup => 'Ready for Pickup';
+  String get readyForPickup => 'பிக்-அப்பிற்கு தயார்';
 
   @override
-  String get completed => 'Completed';
+  String get completed => 'முடிந்தது';
 
   @override
-  String get cancelled => 'Cancelled';
+  String get cancelled => 'ரத்து செய்யப்பட்டது';
 
   @override
-  String get cancelOrder => 'Cancel Order';
+  String get cancelOrder => 'ஆர்டரை ரத்து செய்';
 
   @override
   String get confirmCancellation =>
-      'Are you sure you want to cancel this order?';
+      'இந்த ஆர்டரை நீங்கள் நிச்சயமாக ரத்து செய்ய விரும்புகிறீர்களா?';
 
   @override
-  String get continueShopping => 'Continue Shopping';
+  String get continueShopping => 'தொடர்ந்து ஷாப்பிங் செய்';
 
   @override
-  String get viewMyOrders => 'View My Orders';
+  String get viewMyOrders => 'எனது ஆர்டர்களைக் காண்';
 
   @override
-  String get deliveryLocation => 'Delivery Location';
+  String get deliveryLocation => 'டெலிவரி இடம்';
 
   @override
-  String get paymentIntegrationComingSoon => 'Payment integration coming soon';
+  String get paymentIntegrationComingSoon => 'கட்டண ஒருங்கிணைப்பு விரைவில்';
 
   @override
-  String get emptyCart => 'Your cart is empty';
+  String get emptyCart => 'உங்கள் கார்ட் காலியாக உள்ளது';
 
   @override
-  String get noOrders => 'No orders found';
+  String get noOrders => 'ஆர்டர்கள் எதுவும் இல்லை';
 
   @override
-  String get status => 'Status';
+  String get status => 'நிலை';
 
   @override
-  String get date => 'Date';
+  String get date => 'தேதி';
 
   @override
-  String get items => 'Items';
+  String get items => 'பொருட்கள்';
 
   @override
-  String get farmerOrders => 'Farmer Orders';
+  String get farmerOrders => 'விவசாயி ஆர்டர்கள்';
 
   @override
-  String get updateStatus => 'Update Status';
+  String get updateStatus => 'நிலையைப் புதுப்பி';
 
   @override
-  String get bulkRequirements => 'Bulk Requirements';
+  String get bulkRequirements => 'மொத்த தேவைகள் (Bulk Requirements)';
 
   @override
-  String get myRequirements => 'My Requirements';
+  String get myRequirements => 'எனது தேவைகள்';
 
   @override
-  String get createRequirement => 'Create Requirement';
+  String get createRequirement => 'தேவையை உருவாக்கு';
 
   @override
-  String get product => 'Product';
+  String get product => 'தயாரிப்பு';
 
   @override
-  String get requiredQuantity => 'Required Quantity';
+  String get requiredQuantity => 'தேவையான அளவு';
 
   @override
-  String get targetPrice => 'Target Price';
+  String get targetPrice => 'இலக்கு விலை';
 
   @override
-  String get requiredBy => 'Required By';
+  String get requiredBy => 'தேவைப்படுபவர்';
 
   @override
-  String get offers => 'Offers';
+  String get offers => 'சலுகைகள்';
 
   @override
-  String get viewOffers => 'View Offers';
+  String get viewOffers => 'சலுகைகளை காண்';
 
   @override
-  String get submitOffer => 'Submit Offer';
+  String get submitOffer => 'சலுகையை சமர்ப்பி';
 
   @override
-  String get availableQuantity => 'Available Quantity';
+  String get availableQuantity => 'கிடைக்கும் அளவு';
 
   @override
-  String get offeredPrice => 'Offered Price';
+  String get offeredPrice => 'சலுகை விலை';
 
   @override
-  String get readyDate => 'Ready Date';
+  String get readyDate => 'தயார் தேதி';
 
   @override
-  String get farmerNote => 'Farmer Note';
+  String get farmerNote => 'விவசாயி குறிப்பு';
 
   @override
-  String get myOffers => 'My Offers';
+  String get myOffers => 'எனது சலுகைகள் (My Offers)';
 
   @override
-  String get acceptOffer => 'Accept Offer';
+  String get acceptOffer => 'சலுகையை ஏற்றுக்கொள்';
 
   @override
-  String get rejectOffer => 'Reject Offer';
+  String get rejectOffer => 'சலுகையை நிராகரி';
 
   @override
-  String get withdrawOffer => 'Withdraw Offer';
+  String get withdrawOffer => 'சலுகையை திரும்பப் பெறு';
 
   @override
-  String get acceptedQuantity => 'Accepted Quantity';
+  String get acceptedQuantity => 'ஏற்றுக்கொள்ளப்பட்ட அளவு';
 
   @override
-  String get remainingQuantity => 'Remaining Quantity';
+  String get remainingQuantity => 'மீதமுள்ள அளவு';
 
   @override
-  String get open => 'Open';
+  String get open => 'திறந்துள்ளது';
 
   @override
-  String get partiallyFulfilled => 'Partially Fulfilled';
+  String get partiallyFulfilled => 'பகுதியாக நிறைவேற்றப்பட்டது';
 
   @override
-  String get fulfilled => 'Fulfilled';
+  String get fulfilled => 'நிறைவேற்றப்பட்டது';
 
   @override
-  String get expired => 'Expired';
+  String get expired => 'காலாவதியானது';
 
   @override
-  String get submitted => 'Submitted';
+  String get submitted => 'சமர்ப்பிக்கப்பட்டது';
 
   @override
-  String get shortlisted => 'Shortlisted';
+  String get shortlisted => 'தேர்ந்தெடுக்கப்பட்டது';
 
   @override
-  String get rejected => 'Rejected';
+  String get rejected => 'நிராகரிக்கப்பட்டது';
 
   @override
-  String get withdrawn => 'Withdrawn';
+  String get withdrawn => 'திரும்பப் பெறப்பட்டது';
 
   @override
-  String get bestQuality => 'Best Quality';
+  String get bestQuality => 'சிறந்த தரம்';
 
   @override
-  String get earliestReadyDate => 'Earliest Ready Date';
+  String get earliestReadyDate => 'ஆரம்ப தயார் தேதி';
 
   @override
-  String get noRequirements => 'No requirements found';
+  String get noRequirements => 'தேவைகள் காணப்படவில்லை';
 
   @override
-  String get noOffers => 'No offers found';
+  String get noOffers => 'சலுகைகள் காணப்படவில்லை';
 
   @override
-  String get target => 'Target';
+  String get target => 'இலக்கு';
 
   @override
-  String get publish => 'Publish';
+  String get publish => 'வெளியிடு';
 
   @override
-  String get compareOffers => 'Compare Offers';
+  String get compareOffers => 'சலுகைகளை ஒப்பிடு';
 
   @override
-  String get buyer => 'Buyer';
+  String get buyer => 'வாங்குபவர்';
 
   @override
   String get aiAssistant => 'AI Assistant';
@@ -595,4 +595,57 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get actionError => 'Could not complete the action.';
+
+  @override
+  String get ai_ask_quantity => 'உங்களுக்கு எவ்வளவு அளவு தேவை?';
+
+  @override
+  String get ai_ask_price => 'உங்கள் இலக்கு விலை என்ன?';
+
+  @override
+  String get ai_ask_crop => 'நீங்கள் எந்தப் பயிரைத் தேடுகிறீர்கள்?';
+
+  @override
+  String get ai_confirm_listing =>
+      'இந்தப் பட்டியலை உருவாக்க விரும்பினால் உறுதிப்படுத்தவும்.';
+
+  @override
+  String get ai_confirm_order =>
+      'இந்த ஆர்டரை வைக்க விரும்பினால் உறுதிப்படுத்தவும்.';
+
+  @override
+  String get ai_confirm_requirement =>
+      'இந்தத் தேவையை உருவாக்க விரும்பினால் உறுதிப்படுத்தவும்.';
+
+  @override
+  String get ai_confirm_offer =>
+      'இந்தச் சலுகையைச் சமர்ப்பிக்க விரும்பினால் உறுதிப்படுத்தவும்.';
+
+  @override
+  String get ai_greet => 'வணக்கம்! இன்று நான் உங்களுக்கு எப்படி உதவ முடியும்?';
+
+  @override
+  String get ai_network_error =>
+      'நெட்வொர்க் பிழை. உங்கள் இணைப்பைச் சரிபார்க்கவும்.';
+
+  @override
+  String get ai_service_error =>
+      'ஏஐ சேவை பிழை. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.';
+
+  @override
+  String get ai_parse_error =>
+      'எனக்கு அது புரியவில்லை. தயவுசெய்து மீண்டும் கூறவும்.';
+
+  @override
+  String get ai_fallback_response =>
+      'இதில் எப்படி உதவுவது என்று எனக்குத் தெரியவில்லை. மேலும் விவரங்களை வழங்க முடியுமா?';
+
+  @override
+  String get ai_action_success => 'செயல் வெற்றிகரமாக முடிந்தது.';
+
+  @override
+  String get ai_action_error => 'செயலை நிறைவேற்ற முடியவில்லை.';
+
+  @override
+  String get ai_confirm_action => 'நீங்கள் நிச்சயமாக தொடர விரும்புகிறீர்களா?';
 }

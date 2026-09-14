@@ -55,7 +55,7 @@ class _ProfileCompletionScreenState extends State<ProfileCompletionScreen> {
       if (authState == AuthState.authenticated) {
         if (_selectedRole == 'farmer') {
           Navigator.pushReplacementNamed(context, '/farmer');
-        } else if (_selectedRole == 'customer') {
+        } else if (_selectedRole == 'retail_buyer') {
           Navigator.pushReplacementNamed(context, '/customer');
         } else if (_selectedRole == 'bulk_buyer') {
           Navigator.pushReplacementNamed(context, '/bulkBuyer');
@@ -189,7 +189,7 @@ class _ProfileCompletionScreenState extends State<ProfileCompletionScreen> {
         const SizedBox(width: 8),
         Expanded(
           child: _roleCard(
-            'customer',
+            'retail_buyer',
             l10n.customer,
             enL10n.customer,
             Icons.person,

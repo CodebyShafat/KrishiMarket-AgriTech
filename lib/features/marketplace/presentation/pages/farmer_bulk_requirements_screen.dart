@@ -5,6 +5,7 @@ import '../providers/bulk_requirement_provider.dart';
 
 import 'package:krishimarket/l10n/app_localizations.dart';
 import 'package:krishimarket/core/routing/app_router.dart';
+import 'package:krishimarket/core/utils/status_localizer.dart';
 
 class FarmerBulkRequirementsScreen extends StatefulWidget {
   const FarmerBulkRequirementsScreen({super.key});
@@ -66,7 +67,7 @@ class _FarmerBulkRequirementsScreenState
                                 ),
                               ),
                               Text(
-                                req.status.name.toUpperCase(),
+                                StatusLocalizer.getLocalizedRequirementStatus(req.status, l10n).toUpperCase(),
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.blue,
@@ -91,7 +92,7 @@ class _FarmerBulkRequirementsScreenState
                                 style: const TextStyle(color: Colors.grey),
                               ),
                               Text(
-                                'By: ${req.requiredByDate.toLocal().toString().split(' ')[0]}',
+                                '${l10n.requiredBy}: ${req.requiredByDate.toLocal().toString().split(' ')[0]}',
                                 style: const TextStyle(color: Colors.grey),
                               ),
                             ],

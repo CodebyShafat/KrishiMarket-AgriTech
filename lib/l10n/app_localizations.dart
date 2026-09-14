@@ -1281,6 +1281,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Could not complete the action.'**
   String get actionError;
+
+  /// No description provided for @ai_ask_quantity.
+  ///
+  /// In en, this message translates to:
+  /// **'How much quantity do you need?'**
+  String get ai_ask_quantity;
+
+  /// No description provided for @ai_ask_price.
+  ///
+  /// In en, this message translates to:
+  /// **'What is your target price?'**
+  String get ai_ask_price;
+
+  /// No description provided for @ai_ask_crop.
+  ///
+  /// In en, this message translates to:
+  /// **'Which crop are you looking for?'**
+  String get ai_ask_crop;
+
+  /// No description provided for @ai_confirm_listing.
+  ///
+  /// In en, this message translates to:
+  /// **'Please confirm if you want to create this listing.'**
+  String get ai_confirm_listing;
+
+  /// No description provided for @ai_confirm_order.
+  ///
+  /// In en, this message translates to:
+  /// **'Please confirm if you want to place this order.'**
+  String get ai_confirm_order;
+
+  /// No description provided for @ai_confirm_requirement.
+  ///
+  /// In en, this message translates to:
+  /// **'Please confirm if you want to create this requirement.'**
+  String get ai_confirm_requirement;
+
+  /// No description provided for @ai_confirm_offer.
+  ///
+  /// In en, this message translates to:
+  /// **'Please confirm if you want to submit this offer.'**
+  String get ai_confirm_offer;
+
+  /// No description provided for @ai_greet.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello! How can I help you today?'**
+  String get ai_greet;
+
+  /// No description provided for @ai_network_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Network error. Please check your connection.'**
+  String get ai_network_error;
+
+  /// No description provided for @ai_service_error.
+  ///
+  /// In en, this message translates to:
+  /// **'AI service error. Please try again later.'**
+  String get ai_service_error;
+
+  /// No description provided for @ai_parse_error.
+  ///
+  /// In en, this message translates to:
+  /// **'I couldn\'t understand that. Please rephrase.'**
+  String get ai_parse_error;
+
+  /// No description provided for @ai_fallback_response.
+  ///
+  /// In en, this message translates to:
+  /// **'I\'m not sure how to help with that. Can you provide more details?'**
+  String get ai_fallback_response;
+
+  /// No description provided for @ai_action_success.
+  ///
+  /// In en, this message translates to:
+  /// **'Action completed successfully.'**
+  String get ai_action_success;
+
+  /// No description provided for @ai_action_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Action failed to execute.'**
+  String get ai_action_error;
+
+  /// No description provided for @ai_confirm_action.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to proceed?'**
+  String get ai_confirm_action;
 }
 
 class _AppLocalizationsDelegate

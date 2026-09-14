@@ -39,7 +39,7 @@ class _BuyerOffersListScreenState extends State<BuyerOffersListScreen> {
         ? remainingReq
         : offer.availableQuantity;
 
-    final _qtyController = TextEditingController(text: acceptedQty.toString());
+    final qtyController = TextEditingController(text: acceptedQty.toString());
 
     showDialog(
       context: context,
@@ -52,7 +52,7 @@ class _BuyerOffersListScreenState extends State<BuyerOffersListScreen> {
             Text('Remaining requirement: $remainingReq'),
             const SizedBox(height: 16),
             TextFormField(
-              controller: _qtyController,
+              controller: qtyController,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 labelText: 'Accepted Quantity',
@@ -68,7 +68,7 @@ class _BuyerOffersListScreenState extends State<BuyerOffersListScreen> {
           ),
           ElevatedButton(
             onPressed: () {
-              final qty = double.parse(_qtyController.text);
+              final qty = double.parse(qtyController.text);
               context.read<BulkOfferProvider>().acceptOffer(offer.offerId, qty);
               Navigator.pop(ctx);
             },

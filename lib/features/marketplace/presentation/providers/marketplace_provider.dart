@@ -44,7 +44,10 @@ class MarketplaceProvider with ChangeNotifier {
     notifyListeners();
 
     try {
-      _allProducts = await _repository.getAllAvailableProducts();
+      _allProducts = await _repository.getAllAvailableProducts(
+        search: _searchQuery.isNotEmpty ? _searchQuery : null,
+        category: _selectedCategory != 'All' ? _selectedCategory : null,
+      );
     } catch (e) {
       _error = e.toString();
     } finally {
@@ -55,12 +58,15 @@ class MarketplaceProvider with ChangeNotifier {
 
   void setSearchQuery(String query) {
     _searchQuery = query;
-    notifyListeners();
+    // Debounce or just load right away. For SIH, we can just load right away or let it be.
+    loadProducts();
   }
 
   void setCategory(String category) {
-    _selectedCategory = category;
-    notifyListeners();
+    if (_selectedCategory != category) {
+      _selectedCategory = category;
+      loadProducts();
+    }
   }
 
   void setSortOption(SortOption option) {
@@ -72,7 +78,7 @@ class MarketplaceProvider with ChangeNotifier {
     _searchQuery = '';
     _selectedCategory = 'All';
     _currentSort = SortOption.priceLowToHigh;
-    notifyListeners();
+    loadProducts();
   }
 
   List<ProductEntity> get filteredProducts {

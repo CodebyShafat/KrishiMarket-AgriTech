@@ -171,11 +171,31 @@ class MockProductRepository implements ProductRepository {
   ];
 
   @override
-  Future<List<ProductEntity>> getAllAvailableProducts() async {
+  Future<List<ProductEntity>> getAllAvailableProducts({
+    String? search,
+    String? category,
+    int skip = 0,
+    int limit = 100,
+  }) async {
     await Future.delayed(const Duration(milliseconds: 500));
-    return _products
-        .where((p) => p.isAvailable && p.availableQuantity > 0)
-        .toList();
+    var products = _products.where((p) => p.isAvailable).toList();
+    
+    if (search != null && search.isNotEmpty) {
+      products = products
+          .where((p) =>
+              p.name.toLowerCase().contains(search.toLowerCase()) ||
+              p.category.toLowerCase().contains(search.toLowerCase()))
+          .toList();
+    }
+    
+    if (category != null && category != 'All') {
+      products = products.where((p) => p.category == category).toList();
+    }
+    
+    // Simple pagination mock
+    if (skip >= products.length) return [];
+    final endIndex = (skip + limit) < products.length ? (skip + limit) : products.length;
+    return products.sublist(skip, endIndex);
   }
 
   @override
