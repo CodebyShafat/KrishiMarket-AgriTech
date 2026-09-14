@@ -62,17 +62,16 @@ class MockAiActionExecutor implements AiActionExecutor {
     if (query == null) {
       return AiActionResult(
         status: AiActionResultStatus.needsMoreInformation,
-        message: 'What product are you looking for?',
+        message: 'actionNeedsMoreInformation',
         intent: AiIntent.searchProduct,
         missingFields: ['query'],
       );
     }
 
     // Simulate hitting the Product Repository
-    final allProducts = await productRepository.getAllAvailableProducts();
-    final results = allProducts
-        .where((p) => p.name.toLowerCase().contains(query.toLowerCase()))
-        .toList();
+    final results = await productRepository.getAllAvailableProducts(
+      search: query,
+    );
 
     // Sort logic (mocking "cheapest")
     if (parameters['cheapest'] == true) {
@@ -81,7 +80,7 @@ class MockAiActionExecutor implements AiActionExecutor {
 
     return AiActionResult(
       status: AiActionResultStatus.success,
-      message: 'Found ${results.length} products for "$query".',
+      message: 'actionSuccess',
       intent: AiIntent.searchProduct,
       data: results,
     );
@@ -94,16 +93,9 @@ class MockAiActionExecutor implements AiActionExecutor {
     if (!parameters.containsKey('price')) missing.add('price');
 
     if (missing.isNotEmpty) {
-      String msg = 'I need more details: ${missing.join(', ')}.';
-      if (missing.contains('quantity') &&
-          parameters.containsKey('productName')) {
-        msg = 'How much ${parameters['productName']} do you want to sell?';
-      } else if (missing.contains('price')) {
-        msg = 'What price per kg would you like?';
-      }
       return AiActionResult(
         status: AiActionResultStatus.needsMoreInformation,
-        message: msg,
+        message: 'actionNeedsMoreInformation',
         intent: AiIntent.createProductListing,
         missingFields: missing,
       );
@@ -112,15 +104,14 @@ class MockAiActionExecutor implements AiActionExecutor {
     if (parameters['confirmed'] != true) {
       return AiActionResult(
         status: AiActionResultStatus.needsConfirmation,
-        message:
-            'You are about to list ${parameters['quantity']}kg of ${parameters['productName']} at ₹${parameters['price']}/kg. Do you want to continue?',
+        message: 'actionNeedsConfirmation',
         intent: AiIntent.createProductListing,
       );
     }
 
     return AiActionResult(
       status: AiActionResultStatus.success,
-      message: 'Product listing created successfully!',
+      message: 'actionSuccess',
       intent: AiIntent.createProductListing,
       data: parameters,
     );
@@ -136,7 +127,7 @@ class MockAiActionExecutor implements AiActionExecutor {
     if (missing.isNotEmpty) {
       return AiActionResult(
         status: AiActionResultStatus.needsMoreInformation,
-        message: 'Please tell me the product name and quantity you require.',
+        message: 'actionNeedsMoreInformation',
         intent: AiIntent.createBulkRequirement,
         missingFields: missing,
       );
@@ -145,15 +136,14 @@ class MockAiActionExecutor implements AiActionExecutor {
     if (parameters['confirmed'] != true) {
       return AiActionResult(
         status: AiActionResultStatus.needsConfirmation,
-        message:
-            'Create requirement for ${parameters['quantity']}kg of ${parameters['productName']}?',
+        message: 'actionNeedsConfirmation',
         intent: AiIntent.createBulkRequirement,
       );
     }
 
     return AiActionResult(
       status: AiActionResultStatus.success,
-      message: 'Bulk requirement published!',
+      message: 'actionSuccess',
       intent: AiIntent.createBulkRequirement,
       data: parameters,
     );

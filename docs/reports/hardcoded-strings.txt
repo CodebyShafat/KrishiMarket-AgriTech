@@ -1,0 +1,29 @@
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:65: message: 'What product are you looking for?',
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:84: message: 'Found ${results.length} products for "$query".',
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:97: String msg = 'I need more details: ${missing.join(', ')}.';
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:100: msg = 'How much ${parameters['productName']} do you want to sell?';
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:102: msg = 'What price per kg would you like?';
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:116: 'You are about to list ${parameters['quantity']}kg of ${parameters['productName']} at ₹${parameters['price']}/kg. Do you want to continue?',
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:123: message: 'Product listing created successfully!',
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:139: message: 'Please tell me the product name and quantity you require.',
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:149: 'Create requirement for ${parameters['quantity']}kg of ${parameters['productName']}?',
+lib/features\ai_assistant\data\repositories\mock_ai_action_executor.dart:156: message: 'Bulk requirement published!',
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:53: lowerText.contains('खोजें') ||
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:54: lowerText.contains('दिखाओ')) {
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:59: if (lowerText.contains('cart') || lowerText.contains('कार्ट'))
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:61: if (lowerText.contains('order') || lowerText.contains('ऑर्डर'))
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:79: : 'Here are some products I found.';
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:82: ? 'मैं आपको कार्ट दिखा रहा हूँ।'
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:83: : 'Fetching your cart...';
+lib/features\ai_assistant\data\repositories\mock_ai_assistant_repository.dart:85: return isHindi ? 'ये रहे आपके ऑर्डर।' : 'Here are your orders.';
+lib/l10n\app_localizations_hi.dart:46: String get myOrders => 'मेरे ऑर्डर';
+lib/l10n\app_localizations_hi.dart:58: String get searchProducts => 'उत्पाद खोजें';
+lib/l10n\app_localizations_hi.dart:67: String get cart => 'कार्ट';
+lib/l10n\app_localizations_hi.dart:70: String get orders => 'ऑर्डर';
+lib/l10n\app_localizations_hi.dart:79: String get bulkOrders => 'थोक ऑर्डर';
+lib/l10n\app_localizations_hi.dart:573: String get findProducts => 'उत्पाद खोजें';
+lib/l10n\app_localizations_hi.dart:579: String get findBulkRequirements => 'थोक आवश्यकताएँ खोजें';
+lib/l10n\app_localizations_mr.dart:46: String get myOrders => 'माझे ऑर्डर्स';
+lib/l10n\app_localizations_mr.dart:67: String get cart => 'कार्ट';
+lib/l10n\app_localizations_mr.dart:70: String get orders => 'ऑर्डर्स';
+lib/l10n\app_localizations_mr.dart:79: String get bulkOrders => 'घाऊक ऑर्डर्स';

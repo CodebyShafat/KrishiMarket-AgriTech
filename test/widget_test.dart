@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:krishimarket/main.dart';
 import 'package:krishimarket/core/utils/language_provider.dart';
+import 'package:krishimarket/core/utils/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:krishimarket/features/auth/data/datasources/auth_local_data_source.dart';
 import 'package:krishimarket/features/auth/data/datasources/auth_remote_data_source.dart';
@@ -20,6 +21,7 @@ void main() {
     WidgetTester tester,
   ) async {
     final languageProvider = LanguageProvider();
+    final themeProvider = ThemeProvider();
 
     final authRepository = AuthRepositoryImpl(
       remoteDataSource: MockAuthRemoteDataSourceImpl(),
@@ -31,9 +33,12 @@ void main() {
         providers: [
           ChangeNotifierProvider(create: (_) => AuthProvider(authRepository)),
         ],
-        child: AppLanguage(
-          notifier: languageProvider,
-          child: const KrishiMarketApp(),
+        child: AppThemeNotifier(
+          notifier: themeProvider,
+          child: AppLanguage(
+            notifier: languageProvider,
+            child: const KrishiMarketApp(),
+          ),
         ),
       ),
     );

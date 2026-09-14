@@ -103,6 +103,7 @@ class _MyProductsScreenState extends State<MyProductsScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        heroTag: null,
         onPressed: () {
           Navigator.pushNamed(context, AppRouter.addProduct);
         },

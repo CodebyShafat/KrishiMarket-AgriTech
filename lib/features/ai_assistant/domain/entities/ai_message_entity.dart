@@ -12,6 +12,8 @@ class AiMessageEntity {
   final AiIntent? intent;
   final bool isLoading;
   final AiActionResult? actionResult;
+  final Map<String, dynamic>? parameters;
+  final bool requiresConfirmation;
 
   AiMessageEntity({
     required this.id,
@@ -22,6 +24,8 @@ class AiMessageEntity {
     this.intent,
     this.isLoading = false,
     this.actionResult,
+    this.parameters,
+    this.requiresConfirmation = false,
   });
 
   AiMessageEntity copyWith({
@@ -33,6 +37,8 @@ class AiMessageEntity {
     AiIntent? intent,
     bool? isLoading,
     AiActionResult? actionResult,
+    Map<String, dynamic>? parameters,
+    bool? requiresConfirmation,
   }) {
     return AiMessageEntity(
       id: id ?? this.id,
@@ -43,6 +49,8 @@ class AiMessageEntity {
       intent: intent ?? this.intent,
       isLoading: isLoading ?? this.isLoading,
       actionResult: actionResult ?? this.actionResult,
+      parameters: parameters ?? this.parameters,
+      requiresConfirmation: requiresConfirmation ?? this.requiresConfirmation,
     );
   }
 }

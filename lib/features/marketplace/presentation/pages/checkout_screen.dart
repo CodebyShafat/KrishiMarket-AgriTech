@@ -168,9 +168,16 @@ class CheckoutScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () =>
-                          _placeOrder(context, cart, customerId, location),
-                      child: Text(l10n.placeOrder),
+                      onPressed: context.watch<OrderProvider>().isLoading || cart.isLoading
+                          ? null
+                          : () => _placeOrder(context, cart, customerId, location),
+                      child: context.watch<OrderProvider>().isLoading || cart.isLoading
+                          ? const SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : Text(l10n.placeOrder),
                     ),
                   ),
                 ],

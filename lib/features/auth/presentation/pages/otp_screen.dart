@@ -68,7 +68,7 @@ class _OtpScreenState extends State<OtpScreen> {
         final role = authProvider.currentUser?.role;
         if (role == 'farmer') {
           Navigator.pushReplacementNamed(context, '/farmer');
-        } else if (role == 'customer') {
+        } else if (role == 'retail_buyer') {
           Navigator.pushReplacementNamed(context, '/customer');
         } else if (role == 'bulk_buyer') {
           Navigator.pushReplacementNamed(context, '/bulkBuyer');

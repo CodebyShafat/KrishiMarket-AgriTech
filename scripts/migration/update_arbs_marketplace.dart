@@ -389,9 +389,7 @@ void main() {
       json.remove('myProducts');
       json.addAll(entry.value as Map<String, dynamic>);
       file.writeAsStringSync(
-        '{\n' +
-            json.entries.map((e) => '  "${e.key}": "${e.value}"').join(',\n') +
-            '\n}\n',
+        '{\n${json.entries.map((e) => '  "${e.key}": "${e.value}"').join(',\n')}\n}\n',
       );
     }
   }
